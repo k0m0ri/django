@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",  # フラッシュメッセージのためのapp
     "django.contrib.staticfiles",  # 静的ファイルに関する機能をもつapp
     "snippets.apps.SnippetsConfig",
+    "django_bootstrap5",
 ]
 
 MIDDLEWARE = [
