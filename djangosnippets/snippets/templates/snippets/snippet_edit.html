@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django スニペット</title>
+</head>
+<body>
+    <h1>スニペット編集</h1>
+    <form method="post">
+        <!--CSRF対策-->
+        {% csrf_token %}
+        <!--pタグを用いてレンダリング-->
+        {{ form.as_p }}
+        <button type="submit">保存</button>
+    </form>
+</body>
+</html>
