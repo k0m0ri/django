@@ -1,0 +1,26 @@
+{% load static %}
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django スニペット</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'snippets/css/style.css' %}">
+    {% block extraheader %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-expand flex-md-row navbar-dark bg-dark">
+        <div class="container justify-content-between">
+            <a href="/" class="navbar-brand">Djangoスニペット</a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            {% block main %}{% endblock %}
+        </div>
+    </main>
+</body>
+</html>

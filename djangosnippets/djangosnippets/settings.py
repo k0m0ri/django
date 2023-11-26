@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",  # 静的ファイルに関する機能をもつapp
     "snippets.apps.SnippetsConfig",
     "django_bootstrap5",
+    "pygments_renderer",
 ]
 
 MIDDLEWARE = [
@@ -63,7 +64,7 @@ ROOT_URLCONF = "djangosnippets.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [f"{BASE_DIR}/djangosnippets/templates"],  # テンプレートが格納されたフォルダ
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
